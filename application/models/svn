@@ -1,0 +1,15 @@
+<?php
+
+class Svn extends CI_Model {
+    function __construct()
+    {
+        parent::__construct();
+        
+    }
+
+    public function retrieveSVNData()
+    {
+    	$this->db->get('svn_data', limit, offset);
+    }
+
+}
