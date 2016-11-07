@@ -51,5 +51,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'dashboard';
 $route['retrieveSVNData'] = 'dashboard/retrieveSVNData';
+$route['retrieveJiraData'] = 'dashboard/retrieveJiraData';
+$route['svnTables'] = 'dashboard/svnTables';
+$route['svnCharts'] = 'dashboard/svnCharts';
+$route['jiraTables'] = 'dashboard/jiraTables';
+$route['jiraCharts'] = 'dashboard/jiraCharts';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -2,6 +2,7 @@
 		<script src="<?php echo base_url(); ?>static/js/angular.min.js" type="text/javascript"></script>
 		<script src="<?php echo base_url(); ?>static/libs/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="<?php echo base_url(); ?>static/js/angular-datatables.js" type="text/javascript"></script>
+		<script src="<?php echo base_url(); ?>static/js/dirPagination.js" type="text/javascript"></script>
 		<script src="<?php echo base_url(); ?>static/js/script.js" type="text/javascript"></script>
 	</body>
 </html>

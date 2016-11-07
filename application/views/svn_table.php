@@ -9,13 +9,8 @@
 		<div class="col-lg-10  col-md-10 col-sm-10 " id="data_container">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12" >
-						<?php include('svn_data.php'); ?>
-					</div>
-				</div>
-				<div class="row">
 					<div class="col-lg-12">
-						<?php include('jira_data.php'); ?>
+						<?php include('svn_data.php'); ?>
 					</div>
 				</div>
 			</div>

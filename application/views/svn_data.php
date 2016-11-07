@@ -1,5 +1,5 @@
-<div ng-controller="mainController">
-	<h2> SVN Data </h2>
+<div  ng-app="svnApp" ng-controller="svnController">
+	<h2> SVN Commits </h2>
 	<form>
 		<div class="form-group">
 			<div class="input-group">
@@ -13,37 +13,34 @@
 	<table class="table table-bordered table-striped">
 		<thead>
 			<tr>
-				<td>
-					<a href="#" ng-click="sortType = 'id'; sortReverse = !sortReverse">
-						ID 
-						<span ng-show="sortType == 'id' && !sortReverse" class="fa fa-caret-down"></span>
-						<span ng-show="sortType == 'id' && sortReverse" class="fa fa-caret-up"></span>
-					</a>
-				</td>
-				<td>
-					<a href="#" ng-click="sortType = 'owner'; sortReverse = !sortReverse">
-						Owner
-						<span ng-show="sortType == 'owner' && !sortReverse" class="fa fa-caret-down"></span>
-						<span ng-show="sortType == 'owner' && sortReverse" class="fa fa-caret-up"></span>
-					</a>
-				</td>
-				<td>
-					<a href="#" ng-click="sortType = 'file'; sortReverse = !sortReverse">
-						File
-						<span ng-show="sortType == 'file' && !sortReverse" class="fa fa-caret-down"></span>
-						<span ng-show="sortType == 'file' && sortReverse" class="fa fa-caret-up"></span>
-					</a>
-				</td>
+				<th ng-click="sort('id')">ID
+					<span class="glyphicon sort-icon" ng-show="sortType=='id'" ng-class="{'glyphicon-chevron-up':sortReverse,'glyphicon-chevron-down':!sortReverse}"></span>
+				</th>
+				<th ng-click="sort('owner')">Owner
+					<span class="glyphicon sort-icon" ng-show="sortType=='owner'" ng-class="{'glyphicon-chevron-up':sortReverse,'glyphicon-chevron-down':!sortReverse}"></span>
+				</th>
+				<th ng-click="sort('file')">File
+					<span class="glyphicon sort-icon" ng-show="sortType=='file'" ng-class="{'glyphicon-chevron-up':sortReverse,'glyphicon-chevron-down':!sortReverse}"></span>
+				</th>
+				<th ng-click="sort('type')">Type
+					<span class="glyphicon sort-icon" ng-show="sortType=='type'" ng-class="{'glyphicon-chevron-up':sortReverse,'glyphicon-chevron-down':!sortReverse}"></span>
+				</th>
 			</tr>
 		</thead>
 
 		<tbody>
-			<tr ng-repeat="commit in commitList | orderBy:sortType:sortReverse | filter:searchData">
+			<tr dir-paginate="commit in commitList | orderBy:sortType:sortReverse | filter:searchData |itemsPerPage:5">
 				<td>{{ commit.id }}</td>
 				<td>{{ commit.owner }}</td>
 				<td>{{ commit.file }}</td>
+				<td>{{ commit.type }}</td>
 			</tr>
 		</tbody>
-
+	
 	</table>
+	<dir-pagination-controls
+       max-size="5"
+       direction-links="true"
+       boundary-links="true" >
+    </dir-pagination-controls>
 </div>

@@ -20,7 +20,8 @@ class Dashboard extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('dashboard');
+		$data['url'] = base_url();
+		$this->load->view('dashboard', $data);
 	}
 
 	public function retrieveSVNData()
@@ -328,5 +329,249 @@ class Dashboard extends CI_Controller {
 			  )
 		);
 		print_r(json_encode($svn_data));
+	}
+
+	public function retrieveJiraData()
+	{
+		$jira_data = array(
+			0 => array(
+				"id" => 35,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Improvement",
+			    "components" => "Prototype",
+			    "assignee" => "asheirah",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 1,
+			    "open" => 0,
+			    "closed" => 0
+			),
+			1 => array(
+				"id" => 36,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Time-series data",
+			    "assignee" => "larabell",
+			    "priority" => "Major",
+			    "resolved" => 2,
+			    "inprogress" => 0,
+			    "open" => 0,
+			    "closed" => 0
+			),
+			2 => array(
+				"id" => 37,
+				"timestamp" => "2016-04-15 16:37:40PDT",
+				"issuetype" => "Task",
+				"components" => "Event management",
+				"assignee" => "larabell",
+				"priority" => "Major",
+				"resolved" => 0,
+				"inprogress" => 0,
+				"open" => 1,
+				"closed" => 0
+			),
+			3 => array(
+				"id" => 38,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Regression Tracking",
+			    "assignee" => "larabell",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 0,
+			    "open" => 3,
+			    "closed" => 0
+			),
+			4 => array(
+				"id" => 39,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Visualization (generic widgets)",
+			    "assignee" => "larabell",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 0,
+			    "open" => 10,
+			    "closed" => 0
+			),
+			5 => array(
+				"id" => 40,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Database",
+			    "assignee" => "larabell",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 0,
+			    "open" => 1,
+			    "closed" => 0
+			),
+			6 => array(
+				"id" => 41,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Project/estimation analysis",
+			    "assignee" => "larabell",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 0,
+			    "open" => 2,
+			    "closed" => 0
+			),
+			7 => array(
+				"id" => 42,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "CServer",
+			    "assignee" => "larabell",
+			    "priority" => "Major",
+			    "resolved" => 4,
+			    "inprogress" => 3,
+			    "open" => 16,
+			    "closed" => 0
+			),
+			8 => array(
+				"id" => 43,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Verification Portal (dashboard)",
+			    "assignee" => "larabell",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 0,
+			    "open" => 2,
+			    "closed" => 0
+			),
+			9 => array(
+				"id" => 44,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Testplan Management",
+			    "assignee" => "None",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 0,
+			    "open" => 1,
+			    "closed" => 0
+			),
+			10 => array(
+				"id" => 45,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Development Infrastructure",
+			    "assignee" => "larabell",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 0,
+			    "open" => 2,
+			    "closed" => 0
+			),
+			11 => array(
+				"id" => 46,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Licensing",
+			    "assignee" => "larabell",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 0,
+			    "open" => 1,
+			    "closed" => 0
+			),
+			12 => array(
+				"id" => 47,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Coverage/trending",
+			    "assignee" => "larabell",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 0,
+			    "open" => 1,
+			    "closed" => 0
+			),
+			13 => array(
+				"id" => 48,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Production testbed",
+			    "assignee" => "larabell",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 0,
+			    "open" => 6,
+			    "closed" => 0
+			),
+			14 => array(
+				"id" => 49,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Prototype",
+			    "assignee" => "darronm",
+			    "priority" => "Major",
+			    "resolved" => 5,
+			    "inprogress" => 2,
+			    "open" => 3,
+			    "closed" => 0
+			),
+			15 => array(
+				"id" => 50,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Prototype",
+			    "assignee" => "None",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 0,
+			    "open" => 32,
+			    "closed" => 0
+			),
+			16 => array(
+				"id" => 51,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Prototype",
+			    "assignee" => "slaha",
+			    "priority" => "Major",
+			    "resolved" => 0,
+			    "inprogress" => 1,
+			    "open" => 0,
+			    "closed" => 0
+			),
+			17 => array(
+				"id" => 52,
+			    "timestamp" => "2016-04-15 16:37:40PDT",
+			    "issuetype" => "Task",
+			    "components" => "Prototype",
+			    "assignee" => "larabell",
+			    "priority" => "Major",
+			    "resolved" => 6,
+			    "inprogress" => 0,
+			    "open" => 10,
+			    "closed" => 0
+			)
+		);
+		print_r(json_encode($jira_data));
+	}
+
+	public function svnTables()
+	{
+		$data['url'] = base_url()."svnTables";
+		$this->load->view('svn_table', $data);
+	}
+
+	public function jiraTables()
+	{
+		$this->load->view('jira_table');
+	}
+
+	public function svnCharts()
+	{
+		$this->load->view('svn_chart');
+	}
+
+	public function jiraCharts()
+	{
+		$this->load->view('jira_chart');
 	}
 }
