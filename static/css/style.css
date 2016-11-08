@@ -9,6 +9,10 @@ body > .row{
 	height: 100%;
 }
 
+.bottom_buffer{
+	margin-bottom: 10px;
+}
+
 #div_header_container{
 	height: 100px;
 	background-color: #353942;

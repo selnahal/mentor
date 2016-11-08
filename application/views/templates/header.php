@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>static/libs/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.14-beta/nv.d3.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>static/css/style.css">
+
 </head>
 <body>
 	<input type="hidden" id="url" value="<?php echo base_url(); ?>">

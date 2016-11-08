@@ -1,7 +1,8 @@
 (function (){
 
+    var gridster;
     // Angular App Managing SVN Data Table
-    var app = angular.module('svnApp', ['angularUtils.directives.dirPagination'])
+    var svnApp = angular.module('svnApp', ['angularUtils.directives.dirPagination'])
         .controller('svnController', function($scope) {
             $scope.sortType     = 'id';
             $scope.sortReverse  = false;
@@ -275,6 +276,7 @@
     angular.bootstrap($('#svn_file_extension'), ['svnFileExtensionApp']);
     angular.bootstrap($('#top_committers'), ['topCommittersApp']);
     angular.bootstrap($('#jira_users_issue'), ['jiraUsersIssueApp']);
+
 })();
 
 
@@ -284,6 +286,67 @@ $( document ).ready(function() {
     $("#div_menu").height(navh);
 
     $('.btn_delete').click(function(event) {
-        alert($(this).closest('.gadget_header').text());
+        $(this).closest('.gadget_container').remove();
     });
-})
+    var count = 1;
+
+    $('#modal_create_btn').click(function(event) {
+        var val = $('#widget_type').val();
+        if(val == 'jira_issue'){
+            $('#data_container .container').append('<div class="panel panel-default gadget_container" id="jira_issue_type'+count+'" ng-app="jiraIssueTypeApp" ng-controller="jiraIssueTypeController">'+
+                    '<div class="panel-heading gadget_header">'+
+                        'Jira Issue Type'+
+                        '<div id="btns_div" class="pull-right">'+
+                            '<span class="glyphicon glyphicon-trash pull-right btn_delete" aria-hidden="true"></span>'+
+                            '<span class="glyphicon glyphicon-cog pull-right btn_settings" aria-hidden="true"></span>'+
+                        '</div>'+
+                    '</div>'+
+                   ' <div class="panel-body gadget_body">'+
+                        '<nvd3-pie-chart'+
+                            'id="exampleId"'+
+                            'data="data"'+
+                            'x="xFunction()"'+
+                            'y="yFunction()"'+
+                            'width="500"'+
+                            'height="400"'+
+                            'showLabels="true"'+
+                            'pieLabelsOutside="true"'+
+                            'tooltips="true"'+
+                            'tooltipcontent="toolTipContentFunction()"'+
+                            'showLegend="true"'+
+                            'showValues="true"'+
+                            'labelType="percent"'+
+                            'color="colorFunction()"'+
+                            'legendcolor="colorFunction()">'+
+                          '<svg></svg>'+
+                        '</nvd3-pie-chart>'+
+                    '</div>'+
+                '</div>');
+            $('#new_widget_modal').modal('toggle');
+            var id = '#jira_issue_type' + count;
+            var appName = 'jiraIssueTypeApp';
+            angular.bootstrap($(id), [appName]);
+        }else if(val == 'jira_user_issue'){
+
+        }else if(val == 'svn_file_extension'){
+            
+        }else if(val == 'svn_top_comitters'){
+            
+        }else{
+
+        }
+        // alert($('#widget_type').val());
+        count++;
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
