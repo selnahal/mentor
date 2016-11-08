@@ -6,7 +6,7 @@ Mentor Graphics Task Report
 Application Summary:
 *******************
 
-I created the application using Angularjs for front-end and Codeigniter for the backend. The home page shows a couple of graphs and charts that represent the data that was supplied with the task.
+I created the application using Angularjs for front-end and Codeigniter for the backend. The home page shows graphs and charts that represent the data that was supplied with the task.
 
 -  The first pie chart shows the number of issues and their types that are currently opened on Jira.
 -  The second bar chart shows the number of issues and their types that are assigned to each user.
