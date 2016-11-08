@@ -1,53 +1,35 @@
 ###################
-What is CodeIgniter
+Mentor Graphics Task Report
 ###################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
-
 *******************
-Release Information
+Application Summary:
 *******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+I created the application using Angularjs for front-end and Codeigniter for the backend. The home page shows a couple of graphs and charts that represent the data that was supplied with the task. A side navigation menu has links to other pages that contain tabular representation of the same data. 
 
 **************************
-Changelog and New Features
+What I’ve Done:
 **************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+1.	The application is responsive.
+2.	The user can delete widgets using the trash can icon on them.
+3.	The user can edit the widgets title using the settings icon on them.
+4.	In the tables:
+a.	The user can filter the data by using the search bar on top of the table. It filters all fields in the table. 
+b.	The user can sort table columns in an ascending or descending order.
+c.	The data is divided into several pages and the user can use the pagination below the table to navigate between those pages. 
+5.	All data used in the application is static data, supplied in the javascript file. 
+6.	The only data coming from the backend, is that used in the two tables. However, they are static variables found in the backend that are retrieved using ajax requests. 
 
 *******************
-Server Requirements
+What I would’ve loved to do:
 *******************
 
-PHP version 5.6 or newer is recommended.
-
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
-
-************
-Installation
-************
-
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+1.	Build a fully functional backend system, with a database, and retrieve data from it. 
+2.	Create a user login system and show customized dashboard according to the user logged in. 
+3.	Give the user the ability to add widgets dynamically. 
+4.	Give the user the ability to move widgets to change the layout of their dashboard.
 
 *********
 Resources
