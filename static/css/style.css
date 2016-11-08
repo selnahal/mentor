@@ -86,3 +86,13 @@ th:hover{
 #data_container > div.container{
 	width: 100%;
 }
+
+/* Gadget Styling */
+.gadget_container{
+	
+}
+
+.chart {
+	height: 400px;
+	width: 800px;
+}
