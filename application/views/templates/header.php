@@ -24,3 +24,6 @@
 			</div>
 		</div>
 	</div>
+	<div class="row visible-sm hidden-lg hidden-md visible-xs">
+		<?php include_once('top_menu.php'); ?>
+	</div>

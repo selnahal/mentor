@@ -288,55 +288,22 @@ $( document ).ready(function() {
     $('.btn_delete').click(function(event) {
         $(this).closest('.gadget_container').remove();
     });
-    var count = 1;
 
-    $('#modal_create_btn').click(function(event) {
-        var val = $('#widget_type').val();
-        if(val == 'jira_issue'){
-            $('#data_container .container').append('<div class="panel panel-default gadget_container" id="jira_issue_type'+count+'" ng-app="jiraIssueTypeApp" ng-controller="jiraIssueTypeController">'+
-                    '<div class="panel-heading gadget_header">'+
-                        'Jira Issue Type'+
-                        '<div id="btns_div" class="pull-right">'+
-                            '<span class="glyphicon glyphicon-trash pull-right btn_delete" aria-hidden="true"></span>'+
-                            '<span class="glyphicon glyphicon-cog pull-right btn_settings" aria-hidden="true"></span>'+
-                        '</div>'+
-                    '</div>'+
-                   ' <div class="panel-body gadget_body">'+
-                        '<nvd3-pie-chart'+
-                            'id="exampleId"'+
-                            'data="data"'+
-                            'x="xFunction()"'+
-                            'y="yFunction()"'+
-                            'width="500"'+
-                            'height="400"'+
-                            'showLabels="true"'+
-                            'pieLabelsOutside="true"'+
-                            'tooltips="true"'+
-                            'tooltipcontent="toolTipContentFunction()"'+
-                            'showLegend="true"'+
-                            'showValues="true"'+
-                            'labelType="percent"'+
-                            'color="colorFunction()"'+
-                            'legendcolor="colorFunction()">'+
-                          '<svg></svg>'+
-                        '</nvd3-pie-chart>'+
-                    '</div>'+
-                '</div>');
-            $('#new_widget_modal').modal('toggle');
-            var id = '#jira_issue_type' + count;
-            var appName = 'jiraIssueTypeApp';
-            angular.bootstrap($(id), [appName]);
-        }else if(val == 'jira_user_issue'){
+    $('.btn_settings').click(function (event) {
+        $('#edit_widget_modal').modal('toggle');
+        var id = $(this).closest('.gadget_container').attr('id');
+        $('#edited_panel').val(id);
+        // alert($('#edited_panel').val());
+    });
 
-        }else if(val == 'svn_file_extension'){
-            
-        }else if(val == 'svn_top_comitters'){
-            
-        }else{
-
-        }
-        // alert($('#widget_type').val());
-        count++;
+    $('#modal_update_btn').click(function(event) {
+        // alert('hi');
+        var id = $('#edited_panel').val();
+        var newText = $('#widget_name').val();
+        $('#'+id).find('.gadget_header label').text(newText);
+        alert($('#'+id).find('.gadget_header label').text());
+        // alert(newText);
+        $('#edit_widget_modal').modal('toggle');
     });
 });
 

@@ -47,14 +47,42 @@ th:hover{
 
 #div_user_data > div{
 	line-height: 100px;
-    width: 27%;
-    margin: auto;
+    /*width: 27%;*/
+    /*margin: auto;*/
+    text-align: center;
 }
 
 #div_menu{
 	background-color: #353942;
 	height: 100%;
 	padding: 17% 15%;
+}
+
+#div_top_menu{
+	background-color: #353942;
+	padding: 2% 6%;
+}
+
+#div_top_menu > .dropdown{
+	width: 30%;
+    display: inline-block;
+}
+
+#div_top_menu .dropdown-toggle{
+	background-color: transparent;
+    border: none;
+    color: white;
+    text-shadow: none;
+}
+
+.li_top_menu{
+	background-color: #353942;
+    color: white;
+    border: none;
+}
+
+.li_top_menu a{
+	color: white!important;
 }
 
 .menu_headers{
@@ -112,4 +140,11 @@ svg{
 
 #btns_div > span:nth-child(2){
 	margin-right: 15%;
+}
+
+
+@media (max-width: 860px) {
+	.gadget_container{
+		width: 100%;
+	}
 }
