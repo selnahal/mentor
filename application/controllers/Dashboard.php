@@ -562,16 +562,19 @@ class Dashboard extends CI_Controller {
 
 	public function jiraTables()
 	{
-		$this->load->view('jira_table');
+		$data['url'] = base_url();
+		$this->load->view('jira_table', $data);
 	}
 
 	public function svnCharts()
 	{
-		$this->load->view('svn_chart');
+		$data['url'] = base_url();
+		$this->load->view('svn_chart', $data);
 	}
 
 	public function jiraCharts()
 	{
-		$this->load->view('jira_chart');
+		$data['url'] = base_url();
+		$this->load->view('jira_chart', $data);
 	}
 }

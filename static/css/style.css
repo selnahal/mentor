@@ -89,10 +89,23 @@ th:hover{
 
 /* Gadget Styling */
 .gadget_container{
-	
+	width: 49%;
+	display: inline-block;
 }
 
 .chart {
 	height: 400px;
 	width: 800px;
+}
+
+svg{
+	overflow: overlay!important;
+}
+
+#btns_div{
+	width: 10%;
+}
+
+#btns_div > span:nth-child(2){
+	margin-right: 15%;
 }
