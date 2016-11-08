@@ -16,9 +16,9 @@ What I’ve Done:
 2.	The user can delete widgets using the trash can icon on them.
 3.	The user can edit the widgets title using the settings icon on them.
 4.	In the tables:
-a.	The user can filter the data by using the search bar on top of the table. It filters all fields in the table. 
-b.	The user can sort table columns in an ascending or descending order.
-c.	The data is divided into several pages and the user can use the pagination below the table to navigate between those pages. 
+- The user can filter the data by using the search bar on top of the table. It filters all fields in the table. 
+- The user can sort table columns in an ascending or descending order.
+- The data is divided into several pages and the user can use the pagination below the table to navigate between those pages. 
 5.	All data used in the application is static data, supplied in the javascript file. 
 6.	The only data coming from the backend, is that used in the two tables. However, they are static variables found in the backend that are retrieved using ajax requests. 
 
